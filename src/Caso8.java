@@ -1,17 +1,28 @@
 import java.util.Scanner;
-
 public class Caso8 {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Ingrese el lado del cuadrado ");
-		int lado = sc.nextInt();
+		Scanner sc= new Scanner(System.in);
 		
-		int area = (int) Math.pow(lado, 2);
-		int perimetro = lado*4;
+		System.out.print("Ingrese la nota: ");
+		int nota = sc.nextInt();
 		
-		System.out.println("Área.........." + area);
-		System.out.println("Perímetro....." + perimetro);
+		String estado= sc.nextLine();
+		
+		if (nota>=0 && nota <=7)
+			estado= "Sin Palabras";
+		if (nota>=8 && nota<=10)
+			estado= "Malo";
+		if (nota>=11 && nota<=14)
+			estado= "Regular";
+		if (nota>=15 && nota<=17)
+			estado= "Notable";
+		if (nota>=18 && nota<=20)
+			estado= "Excelente";
+		
+		System.out.println("Estado obtenido: " + estado);
+		
+		
 	}
 
 }
